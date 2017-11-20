@@ -16,10 +16,13 @@ export default class Info extends Component {
         links: [
           {
             place: 'github',
-            url: 'fsdfsdfs'
+            url: 'https://github.com/brentttt'
           },{
             place: 'paintings',
-            url: 'sdflskdfs'
+            url: 'http://www.brenthildebrand.com/'
+          }, {
+            place: 'codepen',
+            url: 'https://codepen.io/hil/'
           }
         ]
       }]

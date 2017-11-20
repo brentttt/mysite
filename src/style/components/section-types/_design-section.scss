@@ -1,0 +1,50 @@
+.design-section {
+  margin: 50px auto;
+  // max-width: $section-width;
+  padding: $pad;
+  padding-top: 50px;
+
+  .design-img {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline;
+    filter: drop-shadow($light-shadow);
+    padding: 15px;
+    height: 270px;
+
+    &:hover {
+        filter: drop-shadow(0 2px 4px gold);
+    }
+  }
+}
+
+.image-zoom-container {
+  background: rgba(255, 255, 255, 0);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  transition: background 1s;
+  z-index: 1000;
+
+  img {
+    box-sizing: border-box;
+    filter: drop-shadow($light-shadow);
+    padding: $pad;
+    position: absolute;
+    width: 40%;
+    transition: all 500ms;
+  }
+}
+
+.remove-button {
+  top: 100px;
+  cursor: pointer;
+  font-size: 2em;
+  right: 100px;
+  position: absolute;
+  text-align: center;
+  width: 30px;
+  z-index: 1;
+}

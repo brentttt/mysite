@@ -11,10 +11,12 @@ const Header = (props) => (
         <NavLink to="/design" activeClassName="nav-active">Design</NavLink>
         <NavLink to="/info" activeClassName="nav-active">Info</NavLink>
       </div>
-      <div className="header__contact"
-         onClick={props.changeContactView
-        }>Contact</div>
+
   </header>
 );
 
 export default Header;
+
+// <div className="header__contact"
+//    onClick={props.changeContactView
+//   }>Contact</div>

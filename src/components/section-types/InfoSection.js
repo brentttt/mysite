@@ -11,7 +11,7 @@ const InfoSection = (props) => (
         <ul className="info__links">
           {props.content.links.map((link) => (
             <li>
-              <a href={link.url}>{link.place}</a>
+              <a target="blank" href={link.url}>{link.place}</a>
             </li>
           ))}
         </ul>

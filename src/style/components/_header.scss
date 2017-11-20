@@ -1,7 +1,7 @@
 header {
   //border-bottom: 1px solid black;
   background: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+  box-shadow: $light-shadow;
   box-sizing: border-box;
   color: orangered;
   left: 0;
@@ -25,7 +25,7 @@ header {
 }
 
 .header__point {
-  color: blue;
+  color: #0ab8b8;
   margin-right: 15px;
 }
 

@@ -5,7 +5,7 @@ const DevSection = (props) => (
     className="section"
     style={{
       color: props.content.color,
-      boxShadow: '0 10px 60px 30px ' + props.content.bg,
+      boxShadow: '0 10px 45px 30px ' + props.content.bg,
       background: props.content.bg,
       zIndex: props.z
     }}>

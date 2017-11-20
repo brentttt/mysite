@@ -7,7 +7,6 @@ import ContentContainer from './ContentContainer';
 import Dev from './Dev';
 import Design from './Design';
 import Info from './Info';
-import ContactView from './ContactView';
 
 
 export default class App extends Component {
@@ -16,8 +15,7 @@ export default class App extends Component {
 
     this.state = {
       scroll: null,
-      headerActive: true,
-      contactActive: false
+      headerActive: true
     }
     this.manageHeaderPosition = _.debounce(this.manageHeaderPosition, 20)
   }
@@ -47,25 +45,18 @@ export default class App extends Component {
       scroll: scroll
     }));
   }
-  changeContactView = () => {
-    this.setState((prevState) => ({
-      contactActive: !prevState.contactActive
-    }))
-  }
   render() {
     return (
       <BrowserRouter>
         <div className="scroll-container" onScroll={this.manageHeaderPosition}>
           <Header
             headerActive={this.state.headerActive}
-            changeContactView={this.changeContactView}
           />
           <Switch>
             <Route path="/" component={Dev} name="dev" exact={true}/>
             <Route path="/design" component={Design}/>
             <Route path="/info" component={Info}/>
           </Switch>
-          {this.state.contactActive && <ContactView />}
         </div>
       </BrowserRouter>
   );
