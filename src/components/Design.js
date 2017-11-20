@@ -15,7 +15,7 @@ export default class Design extends Component {
     }
   }
   componentWillMount = () => {
-    axios.get('http://localhost:3000/design-images')
+    axios.get(`${server}design-images`)
       .then((images) => {
         this.setState(() => ({
           images: images.data
