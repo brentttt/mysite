@@ -7,7 +7,7 @@
   "scripts": {
     "dev-server": "webpack-dev-server",
     "build": "webpack",
-    "start": "node start server/server.js"
+    "start": "node server/server.js"
   },
   "dependencies": {
     "axios": "^0.17.1",
