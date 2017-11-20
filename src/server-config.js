@@ -1,3 +1,3 @@
-const server = 'http://localhost:3000/design-images';
+const server = 'https://whispering-reaches-18566.herokuapp.com/';
 
 export default server;
