@@ -1,2 +1,192 @@
 body {
-  background: grey; }
+  font-family: 'Merriweather Sans', sans-serif; }
+
+.scroll-container {
+  height: 100vh;
+  overflow: scroll; }
+
+.section {
+  height: 500px;
+  position: relative;
+  width: 100%; }
+
+@media all and (max-width: 600px) {
+  .section {
+    height: auto; } }
+
+.section__wrapper {
+  box-sizing: border-box;
+  display: flex;
+  max-width: 100%;
+  overflow: auto;
+  padding: 0px 5px; }
+  .section__wrapper h1 a {
+    position: relative;
+    text-decoration: none;
+    transition: color 100ms, text-shadow 200ms; }
+    .section__wrapper h1 a:after {
+      background: orangered;
+      content: '';
+      left: -6px;
+      top: -2px;
+      height: calc(100% + 5px);
+      position: absolute;
+      transition: width 100ms;
+      width: 0;
+      z-index: -1; }
+    .section__wrapper h1 a:hover {
+      color: white !important;
+      text-shadow: none; }
+      .section__wrapper h1 a:hover:after {
+        width: calc(100% + 10px); }
+  .section__wrapper p {
+    font-weight: lighter;
+    line-height: 1.7em; }
+
+@media all and (max-width: 600px) {
+  .section__wrapper {
+    display: block; } }
+
+.section__content {
+  box-sizing: border-box;
+  padding: 180px 0px;
+  max-width: 500px;
+  width: 50%; }
+
+@media all and (max-width: 1000px) {
+  .section__content {
+    left: 100px;
+    padding: 180px 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1; } }
+
+@media all and (max-width: 600px) {
+  .section__content {
+    display: block;
+    left: 0;
+    padding: 0 20px 20px 20px;
+    position: relative; } }
+
+.section__images {
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+  z-index: -2; }
+  .section__images img {
+    height: 470px; }
+
+@media all and (max-width: 900px) {
+  .section__images {
+    width: 100%; } }
+
+@media all and (max-width: 600px) {
+  .section__images img {
+    height: auto;
+    width: 400px; } }
+
+header {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  color: orangered;
+  left: 0;
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  transition: top 200ms;
+  width: 100%;
+  z-index: 1000; }
+
+.header--not-active {
+  top: -50px; }
+
+.header__title {
+  display: inline;
+  margin-right: 15px; }
+
+.header__point {
+  color: #0ab8b8;
+  margin-right: 15px; }
+
+.header__nav-list {
+  display: inline;
+  list-style-type: none; }
+  .header__nav-list a {
+    color: black;
+    margin: 15px 15px 0 0;
+    text-decoration: none; }
+    .header__nav-list a:hover {
+      color: gold; }
+  .header__nav-list .nav-active {
+    color: orangered; }
+
+.header__contact {
+  cursor: pointer;
+  color: #9442e7;
+  position: absolute;
+  right: 15px;
+  top: 14px; }
+
+.info__links {
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0; }
+  .info__links li {
+    display: inline;
+    list-style-type: none; }
+
+.info-section__content {
+  max-width: 500px;
+  margin: 150px auto; }
+  .info-section__content a {
+    text-decoration: none;
+    color: grey;
+    margin: 15px 15px 0 0;
+    text-decoration: none; }
+    .info-section__content a:hover {
+      color: gold; }
+
+.design-section {
+  margin: 50px auto;
+  padding: 15px;
+  padding-top: 50px; }
+  .design-section .design-img {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    padding: 15px;
+    height: 270px; }
+    .design-section .design-img:hover {
+      filter: drop-shadow(0 2px 4px gold); }
+
+.image-zoom-container {
+  background: rgba(255, 255, 255, 0);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  transition: background 1s;
+  z-index: 1000; }
+  .image-zoom-container img {
+    box-sizing: border-box;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    padding: 15px;
+    position: absolute;
+    width: 40%;
+    transition: all 500ms; }
+
+.remove-button {
+  top: 100px;
+  cursor: pointer;
+  font-size: 2em;
+  right: 100px;
+  position: absolute;
+  text-align: center;
+  width: 30px;
+  z-index: 1; }
