@@ -141,7 +141,8 @@ header {
 
 .info-section__content {
   max-width: 500px;
-  margin: 150px auto; }
+  margin: 150px auto;
+  padding: 0 20px; }
   .info-section__content a {
     text-decoration: none;
     color: grey;
@@ -163,6 +164,11 @@ header {
     height: 270px; }
     .design-section .design-img:hover {
       filter: drop-shadow(0 2px 4px gold); }
+
+@media all and (max-width: 700px) {
+  .design-section .design-img {
+    height: auto;
+    width: 100%; } }
 
 .image-zoom-container {
   background: rgba(255, 255, 255, 0);
