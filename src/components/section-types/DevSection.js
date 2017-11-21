@@ -1,6 +1,11 @@
 import React from 'react';
 
-const DevSection = (props) => (
+const DevSection = (props) => {
+  let mobile = false;
+  if(window.innerWidth < 700) {
+    mobile = true;
+  }
+  return (
   <div
     className="section"
     style={{
@@ -11,9 +16,9 @@ const DevSection = (props) => (
     }}>
     <div className="section__wrapper">
       <div className="section__images">
-        <img src={props.content.image ? '/images/' + props.content.image : '/images/bean.png'} />
+        <img src={!mobile ? '/images/' + props.content.image.name + props.content.image.ext : '/images/' + props.content.image.name + '-mobile' + props.content.image.ext} />
       </div>
-      <div className="section__content" style={{textShadow: "0 0 8px " + props.content.bg}}>
+      <div className="section__content" style={{textShadow: "0 0 30px " + props.content.bg}}>
         <h1><a
           target="blank"
           href={props.content.link}
@@ -25,7 +30,7 @@ const DevSection = (props) => (
       </div>
     </div>
   </div>
-);
+)};
 
 export default DevSection;
 

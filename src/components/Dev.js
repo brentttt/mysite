@@ -12,13 +12,20 @@ export default class Dev extends Component {
         link: "http://www.taxusstreetcoffee.com/",
         bg: "#231f20",
         color: "white",
+        image: {
+          name: "beans",
+          ext: ".png"
+        }
       }, {
         title: "Desktop",
         text: ["A light-weight desktop style note taking app built with React and localStorage."],
         link: "fsdfsdf",
         bg: "#55a055",
         color: "white",
-        image: "notes.png"
+        image: {
+          name: "notes",
+          ext: ".png"
+        }
       }, {
         title: "Trump Twitter Watch",
         text: [
@@ -28,28 +35,40 @@ export default class Dev extends Component {
         link: "https://trump-twitter-watch.herokuapp.com",
         bg: "#f0faf4",
         color: "black",
-        image: "trump-twitter-watch.png"
+        image: {
+          name: "trump-twitter-watch",
+          ext: ".png"
+        }
       }, {
         title: "Font Compare",
         text: ["A simple UI for directly comparing two fonts. It throws an error if a user tries to use a font that is not on their computer."],
         link: "https://codepen.io/hil/full/yXPjvG/",
         bg: "gainsboro",
         color: "black",
-        image: "font-compare.png"
+        image: {
+          name: "font-compare",
+          ext: ".png"
+        }
       }, {
         title: "404",
         text: ["Animated text effect randomly generated with javascript."],
         link: "https://codepen.io/hil/full/rWqvYJ/",
         bg: "#23615f",
         color: "white",
-        image: "texty2.png"
+        image: {
+          name: "texty2",
+          ext: ".png"
+        }
       }, {
         title: "Smiley Search Widget",
         text: ["A simple UI for directly comparing two fonts. It throws an error if a user tries to use a font that is not on their computer."],
         link: "https://codepen.io/hil/full/GNrYow/",
         bg: "#dadada",
         color: "black",
-        image: "search-widget2.gif"
+        image: {
+          name: "search-widget",
+          ext: ".gif"
+        }
       }
     ]
     }

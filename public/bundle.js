@@ -25087,42 +25087,61 @@ var Dev = function (_Component) {
         text: ["Website/ecommerce with for the Virginia based coffee Company"],
         link: "http://www.taxusstreetcoffee.com/",
         bg: "#231f20",
-        color: "white"
+        color: "white",
+        image: {
+          name: "beans",
+          ext: ".png"
+        }
       }, {
         title: "Desktop",
         text: ["A light-weight desktop style note taking app built with React and localStorage."],
         link: "fsdfsdf",
         bg: "#55a055",
         color: "white",
-        image: "notes.png"
+        image: {
+          name: "notes",
+          ext: ".png"
+        }
       }, {
         title: "Trump Twitter Watch",
         text: ["A project analyzing the tone of Donald Trump's tweets with IBM Watson's Tone Analyzer.", "The app consists a backend API built in node, as well as a front end dynamically updated with React."],
         link: "https://trump-twitter-watch.herokuapp.com",
         bg: "#f0faf4",
         color: "black",
-        image: "trump-twitter-watch.png"
+        image: {
+          name: "trump-twitter-watch",
+          ext: ".png"
+        }
       }, {
         title: "Font Compare",
         text: ["A simple UI for directly comparing two fonts. It throws an error if a user tries to use a font that is not on their computer."],
         link: "https://codepen.io/hil/full/yXPjvG/",
         bg: "gainsboro",
         color: "black",
-        image: "font-compare.png"
+        image: {
+          name: "font-compare",
+          ext: ".png"
+        }
       }, {
         title: "404",
         text: ["Animated text effect randomly generated with javascript."],
         link: "https://codepen.io/hil/full/rWqvYJ/",
         bg: "#23615f",
         color: "white",
-        image: "texty2.png"
+        image: {
+          name: "texty2",
+          ext: ".png"
+        }
       }, {
         title: "Smiley Search Widget",
         text: ["A simple UI for directly comparing two fonts. It throws an error if a user tries to use a font that is not on their computer."],
         link: "https://codepen.io/hil/full/GNrYow/",
         bg: "#dadada",
         color: "black",
-        image: "search-widget2.gif"
+        image: {
+          name: "search-widget",
+          ext: ".gif"
+        }
       }]
     };
     return _this;
@@ -25163,6 +25182,10 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var DevSection = function DevSection(props) {
+  var mobile = false;
+  if (window.innerWidth < 700) {
+    mobile = true;
+  }
   return _react2.default.createElement(
     'div',
     {
@@ -25179,11 +25202,11 @@ var DevSection = function DevSection(props) {
       _react2.default.createElement(
         'div',
         { className: 'section__images' },
-        _react2.default.createElement('img', { src: props.content.image ? '/images/' + props.content.image : '/images/bean.png' })
+        _react2.default.createElement('img', { src: !mobile ? '/images/' + props.content.image.name + props.content.image.ext : '/images/' + props.content.image.name + '-mobile' + props.content.image.ext })
       ),
       _react2.default.createElement(
         'div',
-        { className: 'section__content', style: { textShadow: "0 0 8px " + props.content.bg } },
+        { className: 'section__content', style: { textShadow: "0 0 30px " + props.content.bg } },
         _react2.default.createElement(
           'h1',
           null,
