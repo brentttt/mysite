@@ -25252,8 +25252,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var server = __webpack_require__(115).default;
 
-console.log(server);
-
 var Design = function (_Component) {
   _inherits(Design, _Component);
 

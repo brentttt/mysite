@@ -9,11 +9,14 @@ const root = __dirname + '/../public/';
 
 app.use(express.static(root));
 
+app.use('/design', express.static(root));
+app.use('/info', express.static(root));
+
 app.get('/design-images', (req, res) => {
     res.set({
       'Access-Control-Allow-Origin': '*',
       'Content-Type': 'application/json',
-    })
+    });
 
   fs.readdir(root + 'images/design', (err, images) => {
     images = images.filter((image) => {

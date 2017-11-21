@@ -5,8 +5,6 @@ import RemoveSvg from './RemoveSvg';
 
 const server = require('./../server-config').default;
 
-console.log(server);
-
 export default class Design extends Component {
   constructor(props) {
     super(props);
