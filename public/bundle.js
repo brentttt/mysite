@@ -25261,7 +25261,7 @@ var Design = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Design.__proto__ || Object.getPrototypeOf(Design)).call(this, props));
 
     _this.componentWillMount = function () {
-      _axios2.default.get('http://localhost:3000/design-images').then(function (images) {
+      _axios2.default.get(server + 'design-images').then(function (images) {
         _this.setState(function () {
           return {
             images: images.data
@@ -26217,7 +26217,7 @@ exports.default = RemoveSvg;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var server = 'http://localhost:3000/design-images';
+var server = 'https://whispering-reaches-18566.herokuapp.com/';
 
 exports.default = server;
 
