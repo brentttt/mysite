@@ -11,7 +11,8 @@ export default class Design extends Component {
 
     this.state = {
       images: [],
-      imageZoom: null
+      imageZoom: null,
+      mobile: false
     }
   }
   componentWillMount = () => {
@@ -23,6 +24,12 @@ export default class Design extends Component {
       }).catch((err) => {
         console.log(err);
       });
+
+      if(window.innerWidth < 700) {
+        this.setState({
+          mobile: true
+        });
+      }
   }
   zoomImage = (e) => {
     const src = e.target.src;
@@ -63,6 +70,12 @@ export default class Design extends Component {
       image.style.left = 'calc(50% - 300px)';
       image.style.top = '80px';
       image.style.width = '600px';
+
+      if(this.state.mobile) {
+        image.style.width = '100%';
+        image.style.left = '0';
+        return;
+      }
 
       if(horizontal) {
         image.style.width = '800px';

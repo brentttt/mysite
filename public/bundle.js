@@ -25192,7 +25192,7 @@ var DevSection = function DevSection(props) {
       className: 'section',
       style: {
         color: props.content.color,
-        boxShadow: '0 10px 45px 40px ' + props.content.bg,
+        boxShadow: '0 10px 45px 45px ' + props.content.bg,
         background: props.content.bg,
         zIndex: props.z
       } },
@@ -25293,6 +25293,12 @@ var Design = function (_Component) {
       }).catch(function (err) {
         console.log(err);
       });
+
+      if (window.innerWidth < 700) {
+        _this.setState({
+          mobile: true
+        });
+      }
     };
 
     _this.zoomImage = function (e) {
@@ -25335,6 +25341,12 @@ var Design = function (_Component) {
         image.style.top = '80px';
         image.style.width = '600px';
 
+        if (_this.state.mobile) {
+          image.style.width = '100%';
+          image.style.left = '0';
+          return;
+        }
+
         if (horizontal) {
           image.style.width = '800px';
           image.style.left = 'calc(50% - 400px)';
@@ -25344,7 +25356,8 @@ var Design = function (_Component) {
 
     _this.state = {
       images: [],
-      imageZoom: null
+      imageZoom: null,
+      mobile: false
     };
     return _this;
   }
