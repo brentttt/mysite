@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title> 4 0 4 </title>
+  <script src="https://use.typekit.net/rgn3mgx.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+<style>
+body {
+  padding: 0;
+  margin: 0;
+  background: #2F4F4F;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.text {
+  position: absolute;
+  width: 100vw;
+  margin-top: 38vh;
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4.5vw;
+  text-align: center;
+  color: white;
+  transform: rotate(-10deg);
+}
+
+.behind {
+  position: relative;
+}
+
+</style>
+
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,700" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="text">¯\\_(ツ)_/¯<br /><span class="behind">404</span></div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+<script>
+/*jshint esversion: 6 */
+
+$(document).ready(function(){
+//face array index
+  var w = 0;
+  var animationReq;
+  var text = $('.text');
+//stores string for text-shadow
+  var str = '';
+//declare the set timeout variabl globally so we can reference it outside of sLoop later
+  var ts;
+
+//random array
+  var rA = function rA() {
+    f.sort(function(a, b){ return 0.5-Math.random(); });
+  };
+
+//shadow coordinates and r for random
+  var s = {
+    x : {
+      c : 0,
+      r : 0,
+      plus : null
+    },
+    y : {
+      c : 0,
+      r : 0,
+      plus : null
+    }
+  };
+
+// rgb = colors, c = color, r = random
+  var rgb = {
+
+    r : {
+      c : 60,
+      r : 0
+    },
+
+    g : {
+      c : 30,
+      r : 0
+    },
+
+    b : {
+      c : 36,
+      r : 0
+    }
+
+  };
+
+//simplifies getting a random number
+  var ran = function(){return Math.random();};
+
+//function that creates the effect
+//it is called once on page load and is also called when you click anywhere on the body
+  var initiate = function() {
+
+//clears if the last effect hasn't finished
+   cancelAnimationFrame(animationReq);
+
+//clears string for current effect
+  str = '';
+
+//resets x and y coordinates
+  s.x.c = 0;
+  s.y.c = 0;
+
+//iniates random rgb color
+  rgb.r.c = Math.floor(Math.random() * 255) + 1;
+  rgb.g.c = Math.floor(Math.random() * 255) + 1;
+  rgb.b.c = Math.floor(Math.random() * 255) + 1;
+
+//randomizes the initial path of the x and y coordinates and colors
+  s.x.r = ran();
+  s.y.r = ran();
+  rgb.r.r = ran();
+  rgb.g.r = ran();
+  rgb.b.r = ran();
+
+
+  var ranTheRan = function(val, min, max){
+    let cRan = ran();
+
+    if(cRan > min && cRan < max){
+      val.r = ran();
+    }
+  };
+
+  for(var key in s){
+    ranTheRan(s[key], 0.2, 1);
+  }
+
+var counter = 0;
+var cStr;
+
+  var eff = function(){
+
+    for(let key in s){
+      ranTheRan(s[key], 0.994, 1);
+      if(Math.random() < s[key].r) {
+        s[key].c += 1.5;
+        s[key].plus = function(a, b) {
+          return a + b;
+        };
+      } else {
+        s[key].c -= 1.5;
+        s[key].plus = function(a, b) {
+          return a - b;
+        };
+      }
+    }
+    for(let key in rgb){
+      ranTheRan(rgb[key], 0.6, 1);
+      if(Math.random() < rgb[key].r) {rgb[key].c += 1;} else { rgb[key].c -= 1;}
+    }
+
+    if(counter !== 0) {str += ', ' ;} else {str += '';}
+
+    str += s.x.plus(s.x.c, 0.75) + 'px ' + s.y.plus(s.y.c, 0.75) + 'px rgb(' + rgb.r.c + ', ' + rgb.g.c + ', ' + rgb.b.c + '), ';
+    str += s.x.c + 'px ' + s.y.c + 'px rgb(' + rgb.r.c + ', ' + rgb.g.c + ', ' + rgb.b.c + '), ';
+
+    str = str.slice(0, str.length - 2);
+
+    text.css('text-shadow' , str);
+//
+
+animationReq = requestAnimationFrame(eff);
+
+counter++;
+
+  };
+
+  requestAnimationFrame(eff);
+
+  running = false;
+
+  };
+
+  initiate();
+
+});
+
+</script>
+
+</body>
+</html>

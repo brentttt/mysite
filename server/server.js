@@ -1,4 +1,5 @@
 require('./config/config');
+var path = require('path');
 
 const express = require('express');
 const fs = require('fs');
@@ -27,6 +28,10 @@ app.get('/design-images', (req, res) => {
     });
     res.send(images);
   });
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(`${root}/404.html`));
 });
 
 app.listen(port, () => {
