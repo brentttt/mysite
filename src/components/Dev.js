@@ -19,7 +19,7 @@ export default class Dev extends Component {
       }, {
         title: "Desktop",
         text: ["A light-weight desktop style note taking app built with React and localStorage."],
-        link: "fsdfsdf",
+        link: "https://desktopp.herokuapp.com/",
         bg: "#55a055",
         color: "white",
         image: {

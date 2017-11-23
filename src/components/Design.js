@@ -72,6 +72,7 @@ export default class Design extends Component {
       image.style.width = '600px';
 
       if(this.state.mobile) {
+        container.style.backgroundColor = 'rgba(255, 255, 255, .9)';
         image.style.width = '100%';
         image.style.left = '0';
         return;

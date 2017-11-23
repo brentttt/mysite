@@ -25095,7 +25095,7 @@ var Dev = function (_Component) {
       }, {
         title: "Desktop",
         text: ["A light-weight desktop style note taking app built with React and localStorage."],
-        link: "fsdfsdf",
+        link: "https://desktopp.herokuapp.com/",
         bg: "#55a055",
         color: "white",
         image: {
@@ -25342,6 +25342,7 @@ var Design = function (_Component) {
         image.style.width = '600px';
 
         if (_this.state.mobile) {
+          container.style.backgroundColor = 'rgba(255, 255, 255, .9)';
           image.style.width = '100%';
           image.style.left = '0';
           return;
