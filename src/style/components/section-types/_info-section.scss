@@ -22,7 +22,8 @@
     text-decoration: none;
 
     &:hover {
-      color: gold;
+      // color: gold;
+      text-decoration: underline;
     }
   }
 }

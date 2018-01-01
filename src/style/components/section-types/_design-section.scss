@@ -32,9 +32,10 @@
   height: 100vh;
   left: 0;
   position: fixed;
+  overflow: hidden;
   width: 100vw;
   top: 0;
-  transition: background 1s;
+  transition: all .5s;
   z-index: 1000;
 
   img {
@@ -43,7 +44,7 @@
     padding: $pad;
     position: absolute;
     width: 40%;
-    transition: all 500ms;
+    transition: height 2s, all 200ms;
   }
 }
 
@@ -70,4 +71,7 @@
     width: 100%;
     z-index: 1;
   }
+}
+
+.colorHover {
 }

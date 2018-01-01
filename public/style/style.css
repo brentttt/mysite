@@ -156,7 +156,7 @@ header {
     margin: 15px 15px 0 0;
     text-decoration: none; }
     .info-section__content a:hover {
-      color: gold; }
+      text-decoration: underline; }
 
 .design-section {
   margin: 50px auto;
@@ -182,9 +182,10 @@ header {
   height: 100vh;
   left: 0;
   position: fixed;
+  overflow: hidden;
   width: 100vw;
   top: 0;
-  transition: background 1s;
+  transition: all .5s;
   z-index: 1000; }
   .image-zoom-container img {
     box-sizing: border-box;
@@ -192,7 +193,7 @@ header {
     padding: 15px;
     position: absolute;
     width: 40%;
-    transition: all 500ms; }
+    transition: height 2s, all 200ms; }
 
 .remove-button {
   top: 100px;

@@ -46,14 +46,6 @@ export default class Design extends Component {
     const container = document.createElement('div');
     container.classList.add('image-zoom-container');
 
-    const removeButton = document.createElement('div');
-    removeButton.classList.add('remove-button');
-    removeButton.innerHTML = RemoveSvg;
-    removeButton.addEventListener('click', () => {
-      container.remove();
-    })
-    container.append(removeButton);
-
     const image = document.createElement('img');
     image.src = src;
 
@@ -62,6 +54,23 @@ export default class Design extends Component {
     image.style.width = pos.width + 'px';
 
     container.append(image);
+
+    const removeButton = document.createElement('div');
+    removeButton.classList.add('remove-button');
+    removeButton.innerHTML = RemoveSvg;
+    removeButton.addEventListener('click', () => {
+
+       container.style.height = 0;
+       container.style.top = '50vh';
+       container.style.width = 0;
+       container.style.left = '50vw';
+       container.style.opacity = '0';
+
+      setTimeout(function() {
+        container.remove();
+      }, 2000);
+    })
+    container.append(removeButton);
 
     document.getElementsByClassName('container')[0].append(container);
 
