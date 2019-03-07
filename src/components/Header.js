@@ -7,7 +7,7 @@ const Header = (props) => (
     <div className="header__title">Brent Hildebrand</div>
       <span className="header__point">•</span>
       <div className="header__nav-list">
-        <NavLink to="/" exact activeClassName="nav-active">Dev</NavLink>
+        <NavLink to="/" exact activeClassName="nav-active">Web</NavLink>
         <NavLink to="/design" activeClassName="nav-active">Design</NavLink>
         <NavLink to="/info" activeClassName="nav-active">Info</NavLink>
       </div>

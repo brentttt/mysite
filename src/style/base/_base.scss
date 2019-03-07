@@ -1,5 +1,8 @@
+@import url("https://use.typekit.net/rgn3mgx.css");
+
 body {
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: 'din-2014', 'Merriweather Sans', sans-serif;
+  font-size: 1.1rem;
 }
 
 .scroll-container {
@@ -24,37 +27,20 @@ body {
 .section__wrapper {
   box-sizing: border-box;
   display: flex;
-  //margin: 0 auto;
   max-width: 100%;
   overflow: auto;
   padding: 0px 5px;
 
   h1 {
     a {
-      //border-bottom: 2px solid white;
+      color: black;
       position: relative;
       text-decoration: none;
       transition: color 100ms, text-shadow 200ms;
 
-      &:after {
-        background: orangered;
-        content: '';
-        left: -6px;
-        top: -2px;
-        height: calc(100% + 5px);
-        position: absolute;
-        transition: width 100ms;
-        width: 0;
-        z-index: -1;
-      }
-
       &:hover {
-        color: white !important;
-        text-shadow: none;
+        color: blue;
 
-        &:after {
-          width: calc(100% + 10px);
-        }
       }
     }
   }
@@ -73,16 +59,25 @@ body {
 
 
 .section__content {
+  background: white;
   box-sizing: border-box;
-  padding: 180px 0px;
+  box-shadow: $light-shadow;
+  margin: 180px 20px;
   max-width: 500px;
+  padding: 30px 20px;
   width: 40%;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.section__content__header {
+  margin: 0;
 }
 
 @media all and (max-width: 1000px) {
   .section__content {
-    left: 100px;
-    //min-width: 400px;
     padding: 180px 20px;
     position: absolute;
     top: 0;
@@ -103,7 +98,7 @@ body {
 .section__images {
   position: relative;
   overflow: hidden;
-  width: 60%;
+  width: 50%;
   z-index: -2;
   img {
     height: 470px;
@@ -116,7 +111,6 @@ body {
 
     img {
       margin-left: 10%;
-      // height: 470px;
       opacity: .8;
       width: auto;
     }

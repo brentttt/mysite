@@ -8,7 +8,7 @@ export default class Dev extends Component {
     this.state = {
       sections: [{
         title: "Taxus Street Coffee",
-        text: ["Website/ecommerce for the Virginia based coffee Company"],
+        text: ["Branding and web design/development for the Virginia based coffee Company."],
         link: "http://www.taxusstreetcoffee.com/",
         bg: "#231f20",
         color: "white",
@@ -18,7 +18,7 @@ export default class Dev extends Component {
         }
       }, {
         title: "Desktop",
-        text: ["A light-weight desktop style note taking app built with React and localStorage."],
+        text: ["A light-weight desktop style note taking web based app built with React and localStorage."],
         link: "https://desktopp.herokuapp.com/",
         bg: "#55a055",
         color: "white",
@@ -57,6 +57,16 @@ export default class Dev extends Component {
         color: "white",
         image: {
           name: "texty2",
+          ext: ".png"
+        }
+      }, {
+        title: "US Presidents Timeline",
+        text: ["An interactive timeline of the office of the US presidency.", "Built with D3 and GSAP."],
+        link: "https://sskkeettcchh.herokuapp.com/s/us-presidents/",
+        bg: "#de492a",
+        color: "black",
+        image: {
+          name: "us-presidents",
           ext: ".png"
         }
       }, {

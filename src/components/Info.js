@@ -9,8 +9,7 @@ export default class Info extends Component {
       sections: [{
         title: "Info",
         text: [
-          "I am a web and graphic designer and front-end developer based in Brooklyn, New York.",
-          "CV on request."
+          "I am a web/graphic designer, front-end developer, and painter based in Philly."
         ],
         email: 'brent.e.hildebrand@gmail.com',
         links: [
